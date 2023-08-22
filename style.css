@@ -11,7 +11,7 @@ html{
 }
 /* navbar styling */
 .max-width{
-    max-width:1300px;
+    max-width:1200px;
     padding: 0px 80px;
     margin: auto;
 }
@@ -82,16 +82,33 @@ html{
     margin: auto 0px auto 40px;
 }
 .home .home-content .text-1{
-    font-size: 40px;
+    font-size: 45px;
 }
-.home .home-content .text-2{
+/* .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
-}
+} */
+
+.heading {
+    color: white;
+    line-height: 30px;
+  }
+  
+  .role {
+    color: crimson;
+    font-weight: 800;
+    
+  }
+  .subHeading {
+    font-size: 45px;
+    line-height: 40px;
+    padding-bottom: 40px;
+  }
 .home .home-content .text-3{
-    font-size: 40px;
+    font-size: 30px;
     margin: 5px 0;
+    padding-bottom: 20px;
 }
 .home .home-content .text-3 span{
     color: crimson;
@@ -112,11 +129,12 @@ html{
 .home .home-content a:hover{
     color: crimson;
     background: none;
+    
 }
 
 /* about section styling */
-.section{
-    padding: 100px 0;
+section{
+    padding: 10px 0;
 }
 .about,.services, .skills, .projects, .contact, footer{
     font-family: 'poppins',sans-serif;
@@ -176,7 +194,7 @@ section .title::after{
     width: 55%;
 }
 .about .about-content .right .text{
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 600;
     margin-bottom: 20px;   
 }
@@ -185,6 +203,7 @@ section .title::after{
 }
 .about .about-content .right p{
     text-align: justify;
+    font-size: 20px;
 }
 .about .about-content .right a{
     display: inline-block;
@@ -209,6 +228,7 @@ section .title::after{
     /* padding-bottom:50px ; */
 }
 .services .title::before,
+.social .title::before,
 .projects .title::before{
     background-color: #fff;
 }
@@ -252,13 +272,14 @@ section .title::after{
 .skills .title::after{
     content: "What I know";
 }
+
 .skills .skills-content .column{
     width: calc(50% - 30px);
 }
 .skills .skills-content .left .text{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .skills .skills-content .left p{
     text-align: justify;
@@ -279,127 +300,239 @@ section .title::after{
     color: crimson;
     background: none;
 }
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background-color: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    /* width: 80%; */
-    left: 0;
-    top: 0;
-    background-color: crimson;
-}
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 90%;
-}
-.skills-content .right .js::before{
-    width: 80%;
-}
-.skills-content .right .mysql::before{
-    width: 70%;
-}
-.skills-content .right .json::before{
-    width: 70%;
-}
-.skills-content .right .jquery::before{
-    width: 50%;
-}
-.skills-content .right .nodejs::before{
-    width: 40%;
-}
-.skills-content .right .word::before{
-    width: 80%;
-}
-.skills-content .right .c::before{
-    width: 80%;
-}
 
-/* projects section styling */
-.projects .title::after{
-    content:"What I made";
+.rightSkillContainer {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    justify-content: center;
+  }
+  .skillsLogo {
+    width: 80px;
+    transition: all 0.5s;
+  }
+  
+  .skillsLogo:hover {
+    transform: scale(1.2);
+  }
+
+  
+/* social platforms section styling */
+.social .title::after{
+    content:"What I do";
+    background-color:#27365e;
 }
-.projects .carousel .card{
+.social .title{
+    color: white;
+}
+.social{
     background:  #27365e;
-    border-radius: 6px;
-    padding: 25px 35px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.projects .carousel .card:hover{
-    background-color: crimson;
+
+.social .card .box{
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:10px 40px 50px 40px;
+     /* margin-bottom: 40px; */
 }
-.projects .carousel .card .box{
+
+.social .card img{
+    height: 80px;
+    width: 100px;
+}
+.social .card .box p{
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+
+/* Projects Section  */
+.projectSection .title::after{
+    content:"What I made";
+    /* background-color:#27365e; */
+}
+.projectSection {
+    /* margin-top: 4rem; */
+    /* background-color: #e7e7e7; */
+  }
+  
+  .projectTitle {
+    color: #e84949;
+    font-size: 90px;
+    line-height: 75px;
+    padding: 50px 0 30px;
+    text-align: center;
+  }
+  
+  .projectContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-.projects .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.projects .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.projects .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
-    text-align: center;
+    gap: 120px;
+    /* width: 100%; */
+  }
+  
+  #project1 {
+    background-image: url(./images/Screenshot\ \(229\).png);
+    right: 5%;
+  }
+  
+  #project2 {
+    background-image: url(./images/Screenshot\ \(230\).png);
+    left: 5%;
+  }
+  
+  #project3 {
+    background-image: url(./images/Screenshot\ \(231\).png);
+    right: 5%;
+  }
+  
+  #project4 {
+    background-image: url(./images/Screenshot\ \(232\).png);
+    left: 5%;
+  }
+  
+  .projectCard {
+    width: 80%;
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0px 0px 10px #1f1f1f;
+    margin: 2rem auto;
+    z-index: 2;
+  }
+  
+  .projectCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    z-index: 1;
+    transition: 0.5s all;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  
+  .projectCard:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .projectNumber {
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: #fff;
+    display: none;
+    z-index: 10;
+    transition: 0.8s;
+  }
+  
+  .rightNumber {
+    top: -45px;
+    right: -45px;
+  }
+  
+  .leftNumber {
+    top: -45px;
+    left: -45px;
+  }
+  
+  .projectCard:hover .projectNumber {
+    display: block;
+  }
+  
+  .projectCard::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1f1f1f9a;
+    z-index: 0;
+  }
+  
+  .projectContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    position: absolute;
+    z-index: 5;
+    transition: all 0.4s;
+  }
+  
+  .leftProjectContent {
+    left: 5%;
+  }
+  
+  .rightProjectContent {
+    right: 5%;
+  }
+  
+  .projectSkillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60%;
+    gap: 1em;
+  }
+  
+  .projectSkill {
+    width: 40px;
+  }
+  .projectHeading {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+  }
+  
+  .projectSubHeading {
+    font-size: 16px;
+    font-style: italic;
+    width: 70%;
+  }
+  
+  .projectCard:hover .projectContent {
+    transform: scale(1.1);
+  }
+  
+  button {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
     margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid crimson!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background:crimson!important;
-}
+    border-radius: 6px;
+    border: 2px solid crimson;
+  }
+
+  /* Project Section End  */
+  
+
+
+
+
 /* conatct section styling */
 .contact .title::after{
     content: "Get in touch";
+    background-color:aliceblue;
+}
+.contact{
+    background-color:aliceblue;
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
