@@ -107,7 +107,8 @@ html{
   }
 .home .home-content .text-3{
     font-size: 30px;
-    margin: 5px 0;
+    margin: 10px 0;
+    width: 90%;
     padding-bottom: 20px;
 }
 .home .home-content .text-3 span{
@@ -340,12 +341,18 @@ section .title::after{
     justify-content: center;
     align-items: center;
     margin:10px 40px 50px 40px;
-     /* margin-bottom: 40px; */
+    transition: all 0.5s;
 }
 
 .social .card img{
     height: 80px;
     width: 100px;
+   
+}
+
+.social .card .box:hover {
+  transform: scale(1.2);
+
 }
 .social .card .box p{
     color: white;
@@ -380,22 +387,22 @@ section .title::after{
   }
   
   #project1 {
-    background-image: url(./images/Screenshot\ \(229\).png);
+    background-image: url(./images/project1.png);
     right: 5%;
   }
   
   #project2 {
-    background-image: url(./images/Screenshot\ \(230\).png);
+    background-image: url(./images/project4.png);
     left: 5%;
   }
   
   #project3 {
-    background-image: url(./images/Screenshot\ \(231\).png);
+    background-image: url(./images/project3.png);
     right: 5%;
   }
   
   #project4 {
-    background-image: url(./images/Screenshot\ \(232\).png);
+    background-image: url(./images/project2.png);
     left: 5%;
   }
   
@@ -417,15 +424,7 @@ section .title::after{
     bottom: 0;
     right: 0;
     left: 0;
-    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
     z-index: 1;
-    transition: 0.5s all;
-    transform-origin: left;
-    transform: scaleX(0);
-  }
-  
-  .projectCard:hover::before {
-    transform: scaleX(1);
   }
   
   .projectNumber {
@@ -480,19 +479,9 @@ section .title::after{
   }
   
   .rightProjectContent {
-    right: 5%;
+    left: 50%;
   }
-  
-  .projectSkillsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 60%;
-    gap: 1em;
-  }
-  
-  .projectSkill {
-    width: 40px;
-  }
+
   .projectHeading {
     font-size: 50px;
     font-weight: bold;
@@ -502,7 +491,7 @@ section .title::after{
   .projectSubHeading {
     font-size: 16px;
     font-style: italic;
-    width: 70%;
+    width: 80%;
   }
   
   .projectCard:hover .projectContent {

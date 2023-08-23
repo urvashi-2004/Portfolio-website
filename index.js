@@ -21,6 +21,9 @@ $('.menu-btn').click(function(){
     $('.menu-btn i').toggleClass("active")
 })
 
+
+
+
 $('.carousel').owlCarousel({
     margin:20,
     loop:true,
