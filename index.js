@@ -27,10 +27,9 @@ $('.menu-btn').click(function(){
 
 var typeData = new Typed(".role", {
     strings: [
-       "Full Stack Developer",
-       "Web Developer",
-       "Software Developer",
+       "Frontend Developer",
        "Coder",
+       "Software Developer"
     ],
     loop: true,
     typeSpeed: 50,
